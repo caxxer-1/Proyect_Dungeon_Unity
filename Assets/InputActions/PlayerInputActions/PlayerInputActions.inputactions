@@ -153,6 +153,102 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Attacks",
+            "id": "df37e67f-479f-4505-8782-63ff11b73ca5",
+            "actions": [
+                {
+                    "name": "Melee",
+                    "type": "Button",
+                    "id": "ca007867-8f24-4aba-9e06-ee5f1173dced",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Distance",
+                    "type": "Button",
+                    "id": "173f763f-5d6f-4224-b41d-6df24a45e772",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThrowGrenade",
+                    "type": "Button",
+                    "id": "35f171b4-f0b1-441d-9607-99404bb049ea",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "234be52e-c183-404f-9973-95b321f01df3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Melee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58565593-1633-431e-bfdf-c45f50d84604",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Distance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d07c85d-3c5e-4dfc-8f69-535cd4bf72ee",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrowGrenade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "id": "fabfc916-2a49-4e2f-871a-b84418a4f369",
+            "actions": [
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "3f8c41c5-e445-4ac8-b956-e55100266193",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9ba9c7e0-97d6-4e57-af9c-7885537fb45e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

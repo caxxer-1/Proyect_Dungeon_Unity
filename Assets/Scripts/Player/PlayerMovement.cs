@@ -6,12 +6,11 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
     //Movement
+    PlayerStatesManager playerStatesManager;
     float speed = 10;
     float rotationSpeed = 15;
     float runSpeedMultiplier = 2;
     float crouchSpeedMultiplier = .5f;
-    bool crouching = false;
-    bool running = false;
     //Jump
     LayerMask floorLayerMask = 1 << 3;
     bool jumpAsked = false;
@@ -25,14 +24,11 @@ public class PlayerMovement : MonoBehaviour
     float dashImpulse = 20;
     void Start()
     {
-        InputManager.Instance.OnRunPerformed += InputManager_Run;
-        InputManager.Instance.OnRunCanceled += InputManager_StopRun;
-        InputManager.Instance.OnCrouchPerformed += InputManager_Crouch;
-        InputManager.Instance.OnCrouchCanceled += InputManager_StopCrouch;
         InputManager.Instance.OnJumpPerformed += InputManager_Jump;
         InputManager.Instance.OnJumpCanceled += InputManager_StopJump;
         InputManager.Instance.OnDashPerformed += InputManager_Dash;
         rb = GetComponent<Rigidbody>();
+        playerStatesManager = GetComponent<PlayerStatesManager>();
     }
     void FixedUpdate()
     {
@@ -46,9 +42,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 inputVector = InputManager.Instance.GetWalkInputVectorNormalized();
         if (inputVector.magnitude < 0.01f) return;
-        float currentSpeed = speed;
-        if (running) currentSpeed = speed * runSpeedMultiplier;
-        else if (crouching) currentSpeed = speed * crouchSpeedMultiplier;
+        float currentSpeed = playerStatesManager.GetPlayerMovementState() switch
+        {
+            PlayerStatesManager.PlayerMovementState.Walking => speed,
+            PlayerStatesManager.PlayerMovementState.Running => speed * runSpeedMultiplier,
+            PlayerStatesManager.PlayerMovementState.Crouching => speed * crouchSpeedMultiplier,
+            _ => speed
+        };
         rb.linearVelocity = new Vector3(inputVector.x * currentSpeed, rb.linearVelocity.y, inputVector.y * currentSpeed);
     }
     void ManageRotation()
@@ -86,22 +86,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics.CheckSphere(rb.position + Vector3.up * .9f, 1, floorLayerMask);
     }
-    void InputManager_Run(object sender, EventArgs e)
-    {
-        running = true;
-    }
-    void InputManager_StopRun(object sender, EventArgs e)
-    {
-        running = false;
-    }
-    void InputManager_Crouch(object sender, EventArgs e)
-    {
-        crouching = true;
-    }
-    void InputManager_StopCrouch(object sender, EventArgs e)
-    {
-        crouching = false;
-    }
     void InputManager_Jump(object sender, EventArgs e)
     {
         jumpAsked = true;
@@ -117,10 +101,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnDestroy()
     {
-        InputManager.Instance.OnRunPerformed -= InputManager_Run;
-        InputManager.Instance.OnRunCanceled -= InputManager_StopRun;
-        InputManager.Instance.OnCrouchPerformed -= InputManager_Crouch;
-        InputManager.Instance.OnCrouchCanceled -= InputManager_StopCrouch;
         InputManager.Instance.OnJumpPerformed -= InputManager_Jump;
         InputManager.Instance.OnJumpCanceled -= InputManager_StopJump;
         InputManager.Instance.OnDashPerformed -= InputManager_Dash;

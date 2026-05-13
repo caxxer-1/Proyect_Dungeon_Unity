@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance {get; private set;}
+    //PlayerMovement
     public event EventHandler OnRunPerformed;
     public event EventHandler OnRunCanceled;
     public event EventHandler OnCrouchPerformed;
@@ -12,6 +13,11 @@ public class InputManager : MonoBehaviour
     public event EventHandler OnJumpPerformed;
     public event EventHandler OnJumpCanceled;
     public event EventHandler OnDashPerformed;
+    //PlayerAttacks
+    public event EventHandler OnMeleePerformed;
+    public event EventHandler OnDistancePerformed;
+    //PlayerInventory
+    public event EventHandler OnThrowPerformed;
     PlayerInputActions playerInputActions;
 
     void Awake()
@@ -24,10 +30,7 @@ public class InputManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         playerInputActions = new PlayerInputActions();
-    }
-
-    void Start()
-    {
+        //PlayerMovement
         playerInputActions.Movement.Run.performed += PlayerInputActions_RunPerformed;
         playerInputActions.Movement.Run.canceled += PlayerInputActions_RunCanceled;
         playerInputActions.Movement.Crouch.performed += PlayerInputActions_CrouchPerformed;
@@ -35,9 +38,14 @@ public class InputManager : MonoBehaviour
         playerInputActions.Movement.Jump.performed += PlayerInputActions_JumpPerformed;
         playerInputActions.Movement.Jump.canceled += PlayerInputActions_JumpCanceled;
         playerInputActions.Movement.Dash.performed += PlayerInputActions_DashPerformed;
-        playerInputActions.Movement.Enable();
+        //PlayerAttacks
+        playerInputActions.Attacks.Melee.performed += PlayerInputActions_MeleePerformed;
+        playerInputActions.Attacks.Distance.performed += PlayerInputActions_DistancePerformed;
+        //PlayerInventory
+        playerInputActions.Inventory.Throw.performed += PlayerInputActions_ThrowPerformed;
+        playerInputActions.Enable();
     }
-
+    //PlayerMovement
     public Vector2 GetWalkInputVectorNormalized()
     {
         return playerInputActions.Movement.Walk.ReadValue<Vector2>().normalized;
@@ -69,5 +77,19 @@ public class InputManager : MonoBehaviour
     void PlayerInputActions_DashPerformed(InputAction.CallbackContext callbackContext)
     {
         OnDashPerformed?.Invoke(this, EventArgs.Empty);
+    }
+    //PlayerAttacks
+    void PlayerInputActions_MeleePerformed(InputAction.CallbackContext callbackContext)
+    {
+        OnMeleePerformed?.Invoke(this, EventArgs.Empty);
+    }
+    void PlayerInputActions_DistancePerformed(InputAction.CallbackContext callbackContext)
+    {
+        OnDistancePerformed?.Invoke(this, EventArgs.Empty);
+    }
+    //PlayerInventory
+    void PlayerInputActions_ThrowPerformed(InputAction.CallbackContext callbackContext)
+    {
+        OnThrowPerformed?.Invoke(this, EventArgs.Empty);
     }
 }
