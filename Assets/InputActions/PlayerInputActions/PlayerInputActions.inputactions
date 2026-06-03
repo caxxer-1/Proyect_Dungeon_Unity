@@ -144,7 +144,7 @@
                 {
                     "name": "",
                     "id": "241fc0fc-6265-4617-bdc6-d1b58f5b429d",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -159,7 +159,7 @@
             "id": "df37e67f-479f-4505-8782-63ff11b73ca5",
             "actions": [
                 {
-                    "name": "Melee",
+                    "name": "Sword",
                     "type": "Button",
                     "id": "ca007867-8f24-4aba-9e06-ee5f1173dced",
                     "expectedControlType": "",
@@ -168,7 +168,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Distance",
+                    "name": "AimWithBow",
                     "type": "Button",
                     "id": "173f763f-5d6f-4224-b41d-6df24a45e772",
                     "expectedControlType": "",
@@ -184,6 +184,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Axe",
+                    "type": "Button",
+                    "id": "5d3e23b9-4411-42ca-87ca-0d99e07c42ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootBow",
+                    "type": "Button",
+                    "id": "77124ace-844d-4ca1-9867-642ef8616569",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -194,7 +212,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Melee",
+                    "action": "Sword",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -205,7 +223,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Distance",
+                    "action": "AimWithBow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -219,6 +237,28 @@
                     "action": "ThrowGrenade",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6db6f319-ffa0-4c99-8162-c294da3e407d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Axe",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5025e17-cff1-4480-ae1f-0ae23ac6caa3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -227,9 +267,18 @@
             "id": "fabfc916-2a49-4e2f-871a-b84418a4f369",
             "actions": [
                 {
-                    "name": "Throw",
+                    "name": "SwitchItem",
+                    "type": "Value",
+                    "id": "7669edb1-df2a-411d-96ec-de1a16ff5f99",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TakeItem",
                     "type": "Button",
-                    "id": "3f8c41c5-e445-4ac8-b956-e55100266193",
+                    "id": "fd5bec8f-8fe6-4634-afb6-4c34c4242a54",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -239,12 +288,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "9ba9c7e0-97d6-4e57-af9c-7885537fb45e",
-                    "path": "<Keyboard>/q",
+                    "id": "75fb73c3-8b77-4d55-a706-b62763c34365",
+                    "path": "<Mouse>/scroll",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Throw",
+                    "action": "SwitchItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89aff83d-d742-4218-b31c-b4d66d56e374",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TakeItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

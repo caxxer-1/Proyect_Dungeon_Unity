@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     LayerMask floorLayerMask = 1 << 3;
     bool jumpAsked = false;
     bool jumpButtonPressed = false;
-    float jumpForce = 10;
-    float jumpFallForce = 3;
+    float jumpForce = 15;
+    float jumpFallForce = 6;
     float satisfyingFallMultiplier = 4;
     //Dash
     bool dashAsked = false;
@@ -68,7 +68,17 @@ public class PlayerMovement : MonoBehaviour
     void ManageJumpPhysics()
     {   
         if (rb.linearVelocity.y < 0) rb.linearVelocity += Vector3.up * Physics.gravity.y * (satisfyingFallMultiplier - 1) * Time.fixedDeltaTime;
-        else if (rb.linearVelocity.y > 0 && !jumpButtonPressed) rb.linearVelocity += Vector3.up * Physics.gravity.y * (jumpFallForce - 1) * Time.fixedDeltaTime;
+        else if (rb.linearVelocity.y > 0)
+        {
+            if (!jumpButtonPressed)
+            {
+                rb.linearVelocity += Vector3.up * Physics.gravity.y * (jumpFallForce - 1) * Time.fixedDeltaTime;
+            }
+            else
+            {
+                rb.linearVelocity += Vector3.up * Physics.gravity.y * (satisfyingFallMultiplier - 1) * Time.fixedDeltaTime;
+            }
+        }
     }
     void ManageDash()
     {
