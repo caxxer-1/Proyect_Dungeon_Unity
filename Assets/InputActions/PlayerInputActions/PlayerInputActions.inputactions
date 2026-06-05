@@ -159,45 +159,27 @@
             "id": "df37e67f-479f-4505-8782-63ff11b73ca5",
             "actions": [
                 {
-                    "name": "Sword",
+                    "name": "Main Button",
                     "type": "Button",
-                    "id": "ca007867-8f24-4aba-9e06-ee5f1173dced",
+                    "id": "ec3491cb-7137-4904-a88a-cb7a7b5f3f02",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "AimWithBow",
+                    "name": "Secondary Button",
                     "type": "Button",
-                    "id": "173f763f-5d6f-4224-b41d-6df24a45e772",
+                    "id": "daf874d0-2cf2-4cfd-8103-ecfe83964cfb",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ThrowGrenade",
+                    "name": "Throw Item Button",
                     "type": "Button",
-                    "id": "35f171b4-f0b1-441d-9607-99404bb049ea",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Axe",
-                    "type": "Button",
-                    "id": "5d3e23b9-4411-42ca-87ca-0d99e07c42ff",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ShootBow",
-                    "type": "Button",
-                    "id": "77124ace-844d-4ca1-9867-642ef8616569",
+                    "id": "dcb90d83-6cff-4a41-bb34-a207eaf5a4b3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -207,56 +189,34 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "234be52e-c183-404f-9973-95b321f01df3",
+                    "id": "1405a143-6280-4b24-9efd-52ea361c42a4",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sword",
+                    "action": "Main Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "58565593-1633-431e-bfdf-c45f50d84604",
+                    "id": "f4e7b553-0e87-4957-9160-7ab5e9d4c939",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AimWithBow",
+                    "action": "Secondary Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "3d07c85d-3c5e-4dfc-8f69-535cd4bf72ee",
+                    "id": "64d1fce1-a775-420d-8473-7ac515949623",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ThrowGrenade",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6db6f319-ffa0-4c99-8162-c294da3e407d",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Axe",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b5025e17-cff1-4480-ae1f-0ae23ac6caa3",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ShootBow",
+                    "action": "Throw Item Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -267,7 +227,7 @@
             "id": "fabfc916-2a49-4e2f-871a-b84418a4f369",
             "actions": [
                 {
-                    "name": "SwitchItem",
+                    "name": "Switch Item",
                     "type": "Value",
                     "id": "7669edb1-df2a-411d-96ec-de1a16ff5f99",
                     "expectedControlType": "Vector2",
@@ -276,7 +236,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "TakeItem",
+                    "name": "Take Item",
                     "type": "Button",
                     "id": "fd5bec8f-8fe6-4634-afb6-4c34c4242a54",
                     "expectedControlType": "",
@@ -293,7 +253,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SwitchItem",
+                    "action": "Switch Item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -304,7 +264,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TakeItem",
+                    "action": "Take Item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -245,45 +245,27 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""df37e67f-479f-4505-8782-63ff11b73ca5"",
             ""actions"": [
                 {
-                    ""name"": ""Sword"",
+                    ""name"": ""Main Button"",
                     ""type"": ""Button"",
-                    ""id"": ""ca007867-8f24-4aba-9e06-ee5f1173dced"",
+                    ""id"": ""ec3491cb-7137-4904-a88a-cb7a7b5f3f02"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""AimWithBow"",
+                    ""name"": ""Secondary Button"",
                     ""type"": ""Button"",
-                    ""id"": ""173f763f-5d6f-4224-b41d-6df24a45e772"",
+                    ""id"": ""daf874d0-2cf2-4cfd-8103-ecfe83964cfb"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ThrowGrenade"",
+                    ""name"": ""Throw Item Button"",
                     ""type"": ""Button"",
-                    ""id"": ""35f171b4-f0b1-441d-9607-99404bb049ea"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Axe"",
-                    ""type"": ""Button"",
-                    ""id"": ""5d3e23b9-4411-42ca-87ca-0d99e07c42ff"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ShootBow"",
-                    ""type"": ""Button"",
-                    ""id"": ""77124ace-844d-4ca1-9867-642ef8616569"",
+                    ""id"": ""dcb90d83-6cff-4a41-bb34-a207eaf5a4b3"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -293,56 +275,34 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""234be52e-c183-404f-9973-95b321f01df3"",
+                    ""id"": ""1405a143-6280-4b24-9efd-52ea361c42a4"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Sword"",
+                    ""action"": ""Main Button"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""58565593-1633-431e-bfdf-c45f50d84604"",
+                    ""id"": ""f4e7b553-0e87-4957-9160-7ab5e9d4c939"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AimWithBow"",
+                    ""action"": ""Secondary Button"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3d07c85d-3c5e-4dfc-8f69-535cd4bf72ee"",
+                    ""id"": ""64d1fce1-a775-420d-8473-7ac515949623"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ThrowGrenade"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6db6f319-ffa0-4c99-8162-c294da3e407d"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Axe"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b5025e17-cff1-4480-ae1f-0ae23ac6caa3"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ShootBow"",
+                    ""action"": ""Throw Item Button"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -353,7 +313,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""fabfc916-2a49-4e2f-871a-b84418a4f369"",
             ""actions"": [
                 {
-                    ""name"": ""SwitchItem"",
+                    ""name"": ""Switch Item"",
                     ""type"": ""Value"",
                     ""id"": ""7669edb1-df2a-411d-96ec-de1a16ff5f99"",
                     ""expectedControlType"": ""Vector2"",
@@ -362,7 +322,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""TakeItem"",
+                    ""name"": ""Take Item"",
                     ""type"": ""Button"",
                     ""id"": ""fd5bec8f-8fe6-4634-afb6-4c34c4242a54"",
                     ""expectedControlType"": """",
@@ -379,7 +339,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SwitchItem"",
+                    ""action"": ""Switch Item"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -390,7 +350,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TakeItem"",
+                    ""action"": ""Take Item"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -408,15 +368,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Movement_Dash = m_Movement.FindAction("Dash", throwIfNotFound: true);
         // Attacks
         m_Attacks = asset.FindActionMap("Attacks", throwIfNotFound: true);
-        m_Attacks_Sword = m_Attacks.FindAction("Sword", throwIfNotFound: true);
-        m_Attacks_AimWithBow = m_Attacks.FindAction("AimWithBow", throwIfNotFound: true);
-        m_Attacks_ThrowGrenade = m_Attacks.FindAction("ThrowGrenade", throwIfNotFound: true);
-        m_Attacks_Axe = m_Attacks.FindAction("Axe", throwIfNotFound: true);
-        m_Attacks_ShootBow = m_Attacks.FindAction("ShootBow", throwIfNotFound: true);
+        m_Attacks_MainButton = m_Attacks.FindAction("Main Button", throwIfNotFound: true);
+        m_Attacks_SecondaryButton = m_Attacks.FindAction("Secondary Button", throwIfNotFound: true);
+        m_Attacks_ThrowItemButton = m_Attacks.FindAction("Throw Item Button", throwIfNotFound: true);
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
-        m_Inventory_SwitchItem = m_Inventory.FindAction("SwitchItem", throwIfNotFound: true);
-        m_Inventory_TakeItem = m_Inventory.FindAction("TakeItem", throwIfNotFound: true);
+        m_Inventory_SwitchItem = m_Inventory.FindAction("Switch Item", throwIfNotFound: true);
+        m_Inventory_TakeItem = m_Inventory.FindAction("Take Item", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -639,11 +597,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Attacks
     private readonly InputActionMap m_Attacks;
     private List<IAttacksActions> m_AttacksActionsCallbackInterfaces = new List<IAttacksActions>();
-    private readonly InputAction m_Attacks_Sword;
-    private readonly InputAction m_Attacks_AimWithBow;
-    private readonly InputAction m_Attacks_ThrowGrenade;
-    private readonly InputAction m_Attacks_Axe;
-    private readonly InputAction m_Attacks_ShootBow;
+    private readonly InputAction m_Attacks_MainButton;
+    private readonly InputAction m_Attacks_SecondaryButton;
+    private readonly InputAction m_Attacks_ThrowItemButton;
     /// <summary>
     /// Provides access to input actions defined in input action map "Attacks".
     /// </summary>
@@ -656,25 +612,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public AttacksActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Attacks/Sword".
+        /// Provides access to the underlying input action "Attacks/MainButton".
         /// </summary>
-        public InputAction @Sword => m_Wrapper.m_Attacks_Sword;
+        public InputAction @MainButton => m_Wrapper.m_Attacks_MainButton;
         /// <summary>
-        /// Provides access to the underlying input action "Attacks/AimWithBow".
+        /// Provides access to the underlying input action "Attacks/SecondaryButton".
         /// </summary>
-        public InputAction @AimWithBow => m_Wrapper.m_Attacks_AimWithBow;
+        public InputAction @SecondaryButton => m_Wrapper.m_Attacks_SecondaryButton;
         /// <summary>
-        /// Provides access to the underlying input action "Attacks/ThrowGrenade".
+        /// Provides access to the underlying input action "Attacks/ThrowItemButton".
         /// </summary>
-        public InputAction @ThrowGrenade => m_Wrapper.m_Attacks_ThrowGrenade;
-        /// <summary>
-        /// Provides access to the underlying input action "Attacks/Axe".
-        /// </summary>
-        public InputAction @Axe => m_Wrapper.m_Attacks_Axe;
-        /// <summary>
-        /// Provides access to the underlying input action "Attacks/ShootBow".
-        /// </summary>
-        public InputAction @ShootBow => m_Wrapper.m_Attacks_ShootBow;
+        public InputAction @ThrowItemButton => m_Wrapper.m_Attacks_ThrowItemButton;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -701,21 +649,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_AttacksActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_AttacksActionsCallbackInterfaces.Add(instance);
-            @Sword.started += instance.OnSword;
-            @Sword.performed += instance.OnSword;
-            @Sword.canceled += instance.OnSword;
-            @AimWithBow.started += instance.OnAimWithBow;
-            @AimWithBow.performed += instance.OnAimWithBow;
-            @AimWithBow.canceled += instance.OnAimWithBow;
-            @ThrowGrenade.started += instance.OnThrowGrenade;
-            @ThrowGrenade.performed += instance.OnThrowGrenade;
-            @ThrowGrenade.canceled += instance.OnThrowGrenade;
-            @Axe.started += instance.OnAxe;
-            @Axe.performed += instance.OnAxe;
-            @Axe.canceled += instance.OnAxe;
-            @ShootBow.started += instance.OnShootBow;
-            @ShootBow.performed += instance.OnShootBow;
-            @ShootBow.canceled += instance.OnShootBow;
+            @MainButton.started += instance.OnMainButton;
+            @MainButton.performed += instance.OnMainButton;
+            @MainButton.canceled += instance.OnMainButton;
+            @SecondaryButton.started += instance.OnSecondaryButton;
+            @SecondaryButton.performed += instance.OnSecondaryButton;
+            @SecondaryButton.canceled += instance.OnSecondaryButton;
+            @ThrowItemButton.started += instance.OnThrowItemButton;
+            @ThrowItemButton.performed += instance.OnThrowItemButton;
+            @ThrowItemButton.canceled += instance.OnThrowItemButton;
         }
 
         /// <summary>
@@ -727,21 +669,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="AttacksActions" />
         private void UnregisterCallbacks(IAttacksActions instance)
         {
-            @Sword.started -= instance.OnSword;
-            @Sword.performed -= instance.OnSword;
-            @Sword.canceled -= instance.OnSword;
-            @AimWithBow.started -= instance.OnAimWithBow;
-            @AimWithBow.performed -= instance.OnAimWithBow;
-            @AimWithBow.canceled -= instance.OnAimWithBow;
-            @ThrowGrenade.started -= instance.OnThrowGrenade;
-            @ThrowGrenade.performed -= instance.OnThrowGrenade;
-            @ThrowGrenade.canceled -= instance.OnThrowGrenade;
-            @Axe.started -= instance.OnAxe;
-            @Axe.performed -= instance.OnAxe;
-            @Axe.canceled -= instance.OnAxe;
-            @ShootBow.started -= instance.OnShootBow;
-            @ShootBow.performed -= instance.OnShootBow;
-            @ShootBow.canceled -= instance.OnShootBow;
+            @MainButton.started -= instance.OnMainButton;
+            @MainButton.performed -= instance.OnMainButton;
+            @MainButton.canceled -= instance.OnMainButton;
+            @SecondaryButton.started -= instance.OnSecondaryButton;
+            @SecondaryButton.performed -= instance.OnSecondaryButton;
+            @SecondaryButton.canceled -= instance.OnSecondaryButton;
+            @ThrowItemButton.started -= instance.OnThrowItemButton;
+            @ThrowItemButton.performed -= instance.OnThrowItemButton;
+            @ThrowItemButton.canceled -= instance.OnThrowItemButton;
         }
 
         /// <summary>
@@ -933,40 +869,26 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IAttacksActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Sword" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Main Button" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSword(InputAction.CallbackContext context);
+        void OnMainButton(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "AimWithBow" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Secondary Button" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAimWithBow(InputAction.CallbackContext context);
+        void OnSecondaryButton(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "ThrowGrenade" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Throw Item Button" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnThrowGrenade(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Axe" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAxe(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "ShootBow" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnShootBow(InputAction.CallbackContext context);
+        void OnThrowItemButton(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Inventory" which allows adding and removing callbacks.
@@ -976,14 +898,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IInventoryActions
     {
         /// <summary>
-        /// Method invoked when associated input action "SwitchItem" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Switch Item" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchItem(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "TakeItem" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Take Item" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />

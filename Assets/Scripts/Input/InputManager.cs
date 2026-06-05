@@ -14,11 +14,9 @@ public class InputManager : MonoBehaviour
     public event EventHandler OnJumpCanceled;
     public event EventHandler OnDashPerformed;
     //PlayerAttacks
-    public event EventHandler OnSwordPerformed;
-    public event EventHandler OnAimWithBowPerformed;
-    public event EventHandler OnShootBowPerformed;
-    public event EventHandler OnAxePerformed;
-    public event EventHandler OnThrowGrenadePerformed;
+    public event EventHandler OnMainButtonPerformed;
+    public event EventHandler OnSecondaryButtonPerformed;
+    public event EventHandler OnThrowItemPerformed;
     //PlayerInventory
     public event EventHandler OnSwitchItemPerformed;
     public event EventHandler OnTakeItemPerformed;
@@ -43,11 +41,9 @@ public class InputManager : MonoBehaviour
         playerInputActions.Movement.Jump.canceled += PlayerInputActions_JumpCanceled;
         playerInputActions.Movement.Dash.performed += PlayerInputActions_DashPerformed;
         //PlayerAttacks
-        playerInputActions.Attacks.Sword.performed += PlayerInputActions_SwordPerformed;
-        playerInputActions.Attacks.AimWithBow.performed += PlayerInputActions_AimWithBowPerformed;
-        playerInputActions.Attacks.ShootBow.performed += PlayerInputActions_ShootBowPerformed;
-        playerInputActions.Attacks.ThrowGrenade.performed += PlayerInputActions_ThrowGrenadePerformed;
-        playerInputActions.Attacks.Axe.performed += PlayerInputActions_AxePerformed;
+        playerInputActions.Attacks.MainButton.performed += PlayerInputActions_MainButtonPerformed;
+        playerInputActions.Attacks.SecondaryButton.performed += PlayerInputActions_SecondaryButtonPerformed;
+        playerInputActions.Attacks.ThrowItemButton.performed += PlayerInputActions_ThrowItemPerformed;
         //PlayerInventory
         playerInputActions.Inventory.SwitchItem.performed += PlayerInputActions_SwitchItemPerformed;
         playerInputActions.Inventory.TakeItem.performed += PlayerInputActions_TakeItemPerformed;
@@ -87,24 +83,17 @@ public class InputManager : MonoBehaviour
         OnDashPerformed?.Invoke(this, EventArgs.Empty);
     }
     //PlayerAttacks
-    void PlayerInputActions_SwordPerformed(InputAction.CallbackContext callbackContext)
+    void PlayerInputActions_MainButtonPerformed(InputAction.CallbackContext callbackContext)
     {
-        OnSwordPerformed?.Invoke(this, EventArgs.Empty);
+        OnMainButtonPerformed?.Invoke(this, EventArgs.Empty);
     }
-    void PlayerInputActions_AimWithBowPerformed(InputAction.CallbackContext callbackContext)
+    void PlayerInputActions_SecondaryButtonPerformed(InputAction.CallbackContext callbackContext)
     {
-        OnAimWithBowPerformed?.Invoke(this, EventArgs.Empty);
+        OnSecondaryButtonPerformed?.Invoke(this, EventArgs.Empty);
     }
-    void PlayerInputActions_ShootBowPerformed(InputAction.CallbackContext callbackContext)
+    void PlayerInputActions_ThrowItemPerformed(InputAction.CallbackContext callbackContext)
     {
-        OnShootBowPerformed?.Invoke(this, EventArgs.Empty);
-    }
-    void PlayerInputActions_ThrowGrenadePerformed(InputAction.CallbackContext callbackContext)
-    {
-        OnThrowGrenadePerformed?.Invoke(this, EventArgs.Empty);
-    }void PlayerInputActions_AxePerformed(InputAction.CallbackContext callbackContext)
-    {
-        OnAxePerformed?.Invoke(this, EventArgs.Empty);
+        OnThrowItemPerformed?.Invoke(this, EventArgs.Empty);
     }
     //PlayerInventory
     void PlayerInputActions_SwitchItemPerformed(InputAction.CallbackContext callbackContext)
