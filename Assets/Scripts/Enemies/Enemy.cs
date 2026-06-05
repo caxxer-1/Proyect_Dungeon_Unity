@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     NavMeshAgent navMeshAgent;
     GameObject player;
     EnemyState previousEnemyState;
-    EnemyState enemyState;
+    protected EnemyState enemyState;
     bool stateChanged = false;
 
     void Start()
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
             break;
         }
     }
-    enum EnemyState
+    public enum EnemyState
     {
         Walking,
         Attacking,
